@@ -6,11 +6,7 @@
 using namespace std;
 //ahhahahha
 double calculatePerimeter(double a, double b) {
-<<<<<<< HEAD
     return  (a + b);
-=======
-    return  (a + b);
->>>>>>> balchyr
 }
 
 double calculateArea(double a, double b) {
