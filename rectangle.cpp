@@ -6,7 +6,7 @@
 using namespace std;
 //ahhahahha
 double calculatePerimeter(double a, double b) {
-    return  (a + b);
+    return 2 * (a + b);
 }
 
 double calculateArea(double a, double b) {
@@ -30,6 +30,8 @@ void printRectangleParams(double a, double b) {
     cout << "Диагональ: " << calculateDiagonal(a, b) << " ед." << endl;
 
 }
+
+
 int main() {
     setlocale(LC_ALL, "Russian");  
     double length, width; 
