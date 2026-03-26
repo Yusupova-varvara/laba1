@@ -4,7 +4,7 @@
 using namespace std;
 //ahhahahha
 double calculatePerimeter(double a, double b) {
-    return  (a + b);
+    return 2* (a + b);
 }
 
 double calculateArea(double a, double b) {
