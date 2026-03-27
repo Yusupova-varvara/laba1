@@ -62,7 +62,7 @@ public:
         cout << "Высота h: " << h << endl;
         cout << "======================================"<< endl;
         if (!isPositive ()) {
-           cout << "\nОшибка : все параметры положительные" << endl;
+           cout << "\nОшибка : все параметры должны быть положительными!" << endl;
         } 
         else if (!isQuadrilateral()) {
             cout << "\nОшибка: не выполняется правило четырех сторон!" << endl;
@@ -94,21 +94,30 @@ double inputValue(const string& prompt) {
     return value;
 }
     int main() {
+    double a, b, c, d, h;
     
-    cout << "========================================" << endl;
     cout << "========================================" << endl;
     cout << "Программа для вычисления параметров трапеции" << endl;
     cout << "========================================" << endl;
     cout << endl;
-     // Ввод данных
-    double a = inputValue("Введите верхнее основание a: ");
-    double b = inputValue("Введите нижнее основание b: ");
-    double c = inputValue("Введите левую боковую сторону c: ");
-    double d = inputValue("Введите правую боковую сторону d: ");
-    double h = inputValue("Введите высоту h: ");
-    // Создание объекта трапеции
-    Trapezoid trapezoid(a, b, c, d, h);
-    // Вывод результатов
-    trapezoid.printInfo();
+    cout << "Примечание: должно выполняться правило четырех сторон." << endl;
+    cout << "Сумма любых трех сторон больше четвертой." << endl;
+    cout << endl;
+    
+    cout << "Введите параметры трапеции:" << endl;
+    cout << "Верхнее основание a: ";
+    cin >> a;
+    cout << "Нижнее основание b: ";
+    cin >> b;
+    cout << "Левая боковая сторона c: ";
+    cin >> c;
+    cout << "Правая боковая сторона d: ";
+    cin >> d;
+    cout << "Высота h: ";
+    cin >> h;
+    
+    Trapezoid t(a, b, c, d, h);
+    t.print();
+    
     return 0;
 }
