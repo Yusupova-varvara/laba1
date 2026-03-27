@@ -1,5 +1,5 @@
 //программа для вычисления параметров прямоугольника
-//alalallalala
+
 #include <iostream>
 #include <cmath>      // sqrt
 #include <iomanip>   
