@@ -1,4 +1,4 @@
-//ertyu
+
 #include <iostream>
  #include <iomanip>
  #include <cmath>
@@ -24,10 +24,19 @@ public:
         d = right_side;
         h = height;
     }
-      // Проверка корректности данных
-    bool isValid() {
+
+      // Проверка , что все стороны положительные
+     bool isPositive () {
         return (a > 0 && b > 0 && c > 0 && d > 0 && h > 0);
     }
+
+    bool isQuadrilateral(){
+       return (a+b+c>d) && (a+b+d>c) && (a+c+d>b) && (b+c+d>a);
+    }
+    
+    bool isValid(){
+       return isPositive() && isQuadrilateral();
+
      // Вычисление периметра
     double perimeter() {
         return a + b + c + d;
@@ -51,9 +60,16 @@ public:
         cout << "Правая боковая сторона d: " << d << endl;
 
         cout << "Высота h: " << h << endl;
-        cout << "========================================" << endl;
-        
-        if (isValid()) {
+        cout << "======================================"<< endl;
+        if (!isPositive ()) {
+           cout << "\nОшибка : все параметры положительные" << endl;
+        } 
+        else if (!isQuadrilateral()) {
+            cout << "\nОшибка: не выполняется правило четырех сторон!" << endl;
+            cout << "Сумма любых трех сторон должна быть больше четвертой." << endl;
+            cout << "Проверьте введенные значения." << endl;
+        }
+        else {
             cout << "\nРезультаты вычислений:" << endl;
             cout << "Периметр трапеции: " << perimeter() << endl;
             cout << "Площадь трапеции: " << area() << endl;
