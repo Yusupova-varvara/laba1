@@ -4,6 +4,7 @@
 #include <cmath>      // sqrt
 #include <iomanip>   
 using namespace std;
+//функция для вычисления периметра
 
 double calculatePerimeter(double a, double b) {
     return 2 * (a + b);
