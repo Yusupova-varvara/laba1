@@ -1,10 +1,10 @@
 //программа для вычисления параметров прямоугольника
-
+//alalallalala
 #include <iostream>
 #include <cmath>      // sqrt
 #include <iomanip>   
 using namespace std;
-//ahhahahha
+
 double calculatePerimeter(double a, double b) {
     return 2 * (a + b);
 }
